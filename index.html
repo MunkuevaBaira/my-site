@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио начинающего веб-разработчика">
+    <title>Мункуева Баира Руслановна — веб-разработчик</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="header-controls">
+            <button id="theme-toggle" title="Сменить тему">🌙</button>
+            <button id="accessibility-toggle" title="Для слабовидящих">👁️</button>
+        </div>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <h1>Мункуева Баира Руслановна</h1>
+        <p>Начинающий веб-разработчик</p>
+    </header>
+
+    <main>
+        <!-- ОБО МНЕ -->
+        <section id="about">
+            <img src="c:\Users\user\Downloads\2026-10-21_18-07-59.png" alt="Фото Мункуева Баира Руслановна" width="160" height="160">
+            <div>
+                <h2>Обо мне</h2>
+                <p>Привет! Я изучаю <strong>веб-разработку</strong> и создаю сайты
+                   на <em>HTML, CSS и JavaScript</em>. Это мой проект, собранный с нуля.</p>
+            </div>
+        </section>
+
+        <!-- НАВЫКИ -->
+        <section id="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML5 — семантическая вёрстка</li>
+                <li>CSS3 — flexbox, grid, адаптивность, тёмная тема</li>
+                <li>JavaScript — события, работа с DOM, формы</li>
+                <li>Инструменты — VS Code, Live Server, Git</li>
+            </ul>
+        </section>
+
+        <!-- ПРОЕКТЫ -->
+        <section id="projects">
+            <h2>Мои проекты</h2>
+            <article>
+                <h3>🐾 Ветеринарная клиника</h3>
+                <p>Сайт для ветеринарной клиники с информацией об услугах, профилями врачей и онлайн-записью на прием.</p>
+                <a href="https://www.figma.com/proto/6ZL4B8XtuSieQhlqIScMzI/%D0%9C%D1%83%D0%BD%D0%BA%D1%83%D0%B5%D0%B2%D0%B0-%D0%91%D0%B0%D0%B8%D1%80%D0%B0-09%D0%9048?node-id=1-6&starting-point-node-id=1%3A6&t=elZ2CiS7njKE5UMP-1" target="_blank" rel="noopener noreferrer">Смотреть проект →</a>
+            </article>
+            <article>
+                <h3>✈️ Блог о путешествиях</h3>
+                <p>Многостраничный сайт с картой поездок и галереей фотографий.</p>
+                <a href="#">Смотреть проект →</a>
+            </article>
+            <article>
+                <h3>📚 Список книг</h3>
+                <p>Интерактивный список прочитанного с поиском и фильтрами.</p>
+                <a href="#">Смотреть проект →</a>
+            </article>
+        </section>
+
+        <!-- КОНТАКТЫ -->
+        <section id="contacts">
+            <h2>Связаться со мной</h2>
+            <form action="#" method="POST">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="you@mail.ru" required>
+
+                <label for="msg">Сообщение</label>
+                <textarea id="msg" name="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+            <p id="form-status" role="status"></p>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© <span id="year">2026</span> Мункуева Баира Руслановна. Проект на HTML + CSS + JS.</p>
+    </footer>
+
+    <!-- КНОПКА «НАВЕРХ» -->
+    <button id="to-top" title="Наверх">↑</button>
+    <!-- ПАНЕЛЬ ДЛЯ СЛАБОВИДЯЩИХ -->
+    <div id="accessibility-panel" class="acc-panel" aria-hidden="true">
+  <div class="acc-header">
+    <h3>Настройки сайта</h3>
+    <button id="acc-close" title="Закрыть">✖</button>
+  </div>
+  
+  <div class="acc-content">
+    <!-- Размер шрифта -->
+    <div class="acc-group">
+      <span>Размер шрифта:</span>
+      <div class="acc-buttons">
+        <button id="acc-font-down" title="Уменьшить шрифт">A-</button>
+        <button id="acc-font-reset" title="Обычный шрифт">A</button>
+        <button id="acc-font-up" title="Увеличить шрифт">A+</button>
+      </div>
+    </div>
+
+    <!-- Цветовые схемы -->
+    <div class="acc-group">
+      <span>Цветовая схема:</span>
+      <div class="acc-themes">
+        <button class="acc-color-btn" data-theme="default" title="Обычная" style="background:#fff; color:#000;">Аа</button>
+        <button class="acc-color-btn" data-theme="bw" title="Черно-белая" style="background:#fff; color:#000; border: 1px solid #000;">Аа</button>
+        <button class="acc-color-btn" data-theme="wb" title="Бело-черная" style="background:#000; color:#fff;">Аа</button>
+        <button class="acc-color-btn" data-theme="bb" title="Синий на голубом" style="background:#99ccff; color:#000080;">Аа</button>
+      </div>
+    </div>
+
+    <!-- Изображения -->
+    <div class="acc-group">
+      <label class="acc-checkbox">
+        <input type="checkbox" id="acc-images"> Отключить изображения
+      </label>
+    </div>
+
+    <!-- Звук (Озвучивание) -->
+    <div class="acc-group">
+      <label class="acc-checkbox">
+        <input type="checkbox" id="acc-speech"> Озвучивать текст при наведении
+      </label>
+    </div>
+
+    <button id="acc-reset-all" class="acc-reset-btn">Сбросить всё</button>
+  </div>
+</div>
+    <!-- JAVASCRIPT (defer = выполнится после загрузки HTML) -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
