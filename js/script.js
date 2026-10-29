@@ -105,23 +105,15 @@ const btnFontUp = document.querySelector('#acc-font-up');
 const btnFontDown = document.querySelector('#acc-font-down');
 const btnFontReset = document.querySelector('#acc-font-reset');
 
-if (btnFontUp) {
-    btnFontUp.addEventListener('click', () => {
-        if (currentFontSize < 32) { currentFontSize += 2; htmlEl.style.setProperty('--base-font-size', `${currentFontSize}px`); }
-    });
-}
-
-if (btnFontDown) {
-    btnFontDown.addEventListener('click', () => {
-        if (currentFontSize > 12) { currentFontSize -= 2; htmlEl.style.setProperty('--base-font-size', `${currentFontSize}px`); }
-    });
-}
-
-if (btnFontReset) {
-    btnFontReset.addEventListener('click', () => {
-        currentFontSize = 16; htmlEl.style.setProperty('--base-font-size', `16px`);
-    });
-}
+if (btnFontUp) btnFontUp.addEventListener('click', () => {
+    if (currentFontSize < 32) { currentFontSize += 2; htmlEl.style.setProperty('--base-font-size', `${currentFontSize}px`); }
+});
+if (btnFontDown) btnFontDown.addEventListener('click', () => {
+    if (currentFontSize > 12) { currentFontSize -= 2; htmlEl.style.setProperty('--base-font-size', `${currentFontSize}px`); }
+});
+if (btnFontReset) btnFontReset.addEventListener('click', () => {
+    currentFontSize = 16; htmlEl.style.setProperty('--base-font-size', `16px`);
+});
 
 document.querySelectorAll('.acc-color-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -172,4 +164,4 @@ if (btnResetAll) {
         isSpeechEnabled = false;
         window.speechSynthesis.cancel();
     });
-                                 }
+}
